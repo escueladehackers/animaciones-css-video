@@ -4,36 +4,3 @@ header
   min-height: 100vh
   background: linear-gradient(rgba($black, 0.6), rgba($black, 0.6))
   position: relative
-
-  .burger-container
-    +size(100px)
-    +align()
-    cursor: pointer
-  .burger
-    content: ''
-    width: 100%
-    height: 10px
-    background: $white
-    +align(vertical)
-    position: relative
-    transition: background $trns-duration
-    &::before, &::after
-      content: ''
-      width: 100%
-      height: 10px
-      background: $white
-      position: absolute
-      transition: transform $trns-duration
-    &::before
-      transform: translateY(-30px)
-    &::after
-      transform: translateY(30px)
-
-
-  .burger-container.is-active
-    .burger
-      background: transparent
-      &::before
-        transform: rotate(45deg) translateY(0)
-      &::after
-        transform: rotate(-45deg) translateY(0)
