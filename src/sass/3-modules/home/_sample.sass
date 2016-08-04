@@ -4,3 +4,33 @@ header
   min-height: 100vh
   background: linear-gradient(rgba($black, 0.6), rgba($black, 0.6))
   position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  text-align: center
+  color: $white
+  h1
+    text-transform: uppercase
+
+  a.cta
+    margin: 2.5em 0
+    background-color: $orange
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 1em 2em
+    border-radius: 10px
+    text-decoration: none
+    color: $white
+
+    .odin
+      +size(30px)
+      margin-left: 8px
+
+
+  p
+    font-size: ms(2)
+
+    &.author
+      font-size: 0.7em
