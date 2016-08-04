@@ -4,9 +4,10 @@
   top: 0
   width: 100%
   height: 100%
-  +e(background)
-    background: rgba($black, 0.5)
-
+  background: transparent
+  overflow: hidden
+  transition: background $trns-duration
+  pointer-events: none
   +e(body)
     width: 60%
     background: $white
@@ -14,6 +15,8 @@
     position: relative
     padding: 15px
     text-align: center
+    transform: translateY(-200%) translate(-50%, -50%)
+    transition: transform $trns-duration
 
   +e(close)
     position: absolute
@@ -42,3 +45,15 @@
     transition: box-shadow $trns-duration
     &:hover
       box-shadow: 0 4px 6px 0 rgba($black, 0.2)
+
+
+
+// Animación en sí misma
+.modal.is-opened
+  background: rgba($black, 0.7)
+  pointer-events: all
+  .modal__body
+    transform: translateY(0) translate(-50%, -50%)
+
+header.modal-is-opened
+  filter: blur(10px)
