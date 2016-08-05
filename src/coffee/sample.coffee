@@ -10,8 +10,6 @@ trigger.on 'click', ->
   header.addClass 'modal-is-opened'
   modal.addClass 'is-opened'
 
-
-
 closeModal = ->
   header.removeClass 'modal-is-opened'
   modal.removeClass 'is-opened'
