@@ -2,6 +2,7 @@
 header = $('header')
 trigger = $('.cta')
 modal = $('.modal')
+everything = $(document)
 
 closeBtn = $('.modal__close')
 background = $('.modal__background')
@@ -16,3 +17,7 @@ closeModal = ->
 
 closeBtn.on 'click', closeModal
 background.on 'click', closeModal
+
+everything.keyup (e) ->
+    if e.keyCode is 27
+      closeModal()
